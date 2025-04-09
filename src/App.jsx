@@ -41,8 +41,8 @@ function App() {
       setWeather(resWeather.data);
       setForecast(resForecast.data.list.slice(0, 8)); // ambil 8 jam ke depan
     } catch (err) {
-      console.error("Gagal ambil data cuaca:", err);
-      alert("Kota tidak ditemukan.");
+      console.error("Failed to fetch weather data::", err);
+      alert("City not found.");
     } finally {
       setLoading(false);
     }
